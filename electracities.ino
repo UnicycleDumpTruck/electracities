@@ -92,8 +92,8 @@ Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUMPIXELS, PIXELPIN, NEO_GRB + NEO_K
 #define SERIALDEBUG 0 // Make everything wait to start until Serial connection established
 
 #define LEFT_SENSOR_THRESHOLD 750
-#define MID_SENSOR_THRESHOLD 575
-#define RIGHT_SENSOR_THRESHOLD 475
+#define MID_SENSOR_THRESHOLD 750 // was 575
+#define RIGHT_SENSOR_THRESHOLD 575 // was 475
 int prevLeftValue = 0;
 int prevMidValue = 0;
 int prevRightValue = 0;
@@ -256,11 +256,11 @@ void readSwitches()
   int rightValue = analogRead(RIGHTSENSOR);
   rightValue = analogRead(RIGHTSENSOR);
   
-/*  Serial.print(leftValue);
+  Serial.print(leftValue);
   Serial.print(" ");
   Serial.print(midValue);
   Serial.print(" ");
-  Serial.println(rightValue);*/
+  Serial.println(rightValue);
 
   if (prevLeftValue > LEFT_SENSOR_THRESHOLD) {
     if (leftValue < LEFT_SENSOR_THRESHOLD) {
