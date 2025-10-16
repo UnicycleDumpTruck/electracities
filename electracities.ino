@@ -256,11 +256,11 @@ void readSwitches()
   int rightValue = analogRead(RIGHTSENSOR);
   rightValue = analogRead(RIGHTSENSOR);
   
-  Serial.print(leftValue);
+  /*Serial.print(leftValue);
   Serial.print(" ");
   Serial.print(midValue);
   Serial.print(" ");
-  Serial.println(rightValue);
+  Serial.println(rightValue);*/
 
   if (prevLeftValue > LEFT_SENSOR_THRESHOLD) {
     if (leftValue < LEFT_SENSOR_THRESHOLD) {
